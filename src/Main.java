@@ -25,9 +25,9 @@ public class Main {
         System.out.println("Очередь в 1ую кассу" + queue1);
         System.out.println("Очередь во 2ую кассу" + queue2);
         System.out.println("Очередь во 3ую кассу" + queue3);
+
         example();
     }
-
     private static void add(String name, Queue<String> queue1, Queue<String> queue2, Queue<String> queue3) {
         if(queue1.size() ==MAX_SIZE && queue2.size() == MAX_SIZE && queue3.size() == MAX_SIZE) {
             System.out.println("Сколько можно!?!?!?!?! Зовите Галю!");
@@ -40,10 +40,7 @@ public class Main {
         } else {
             queue3.offer(name);
         }
-
-
     }
-
     private static void remove (Queue<String> queue1, Queue<String> queue2, Queue<String> queue3) {
         if(RANDOM.nextBoolean()) {
             queue1.poll();
@@ -53,7 +50,6 @@ public class Main {
             queue3.poll();
         }
     }
-
     private static void fillingTheQueue(Queue<String> queue) {
         int size = RANDOM.nextInt(MAX_SIZE + 1);
         for (int i = 0; i < size; i++) {
@@ -72,9 +68,7 @@ public class Main {
             for (int j = 0; j < 8; j++) {
                 System.out.print(biDemArrList.get(i).get(j) + " ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
-
-
 }
